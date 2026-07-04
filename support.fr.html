@@ -33,9 +33,15 @@
     nav a { color: rgba(255,255,255,0.85); text-decoration: none; font-size: 14px; margin-inline-start: 24px; }
     nav a:hover { color: #fff; }
 
-    .lang-switch { display: inline-flex; align-items: center; gap: 10px; padding-inline-start: 18px; margin-inline-start: 18px; border-inline-start: 1px solid rgba(255,255,255,0.3); font-size: 13px; font-weight: 700; }
-    .lang-switch a { margin-inline-start: 0; }
-    .lang-switch a[aria-current="page"] { color: #fff; pointer-events: none; }
+    .lang-switch { position: relative; margin-inline-start: 18px; padding-inline-start: 18px; border-inline-start: 1px solid rgba(255,255,255,0.3); }
+    .lang-switch summary { display: inline-flex; align-items: center; gap: 6px; cursor: pointer; list-style: none; font-size: 14px; color: rgba(255,255,255,0.85); }
+    .lang-switch summary::-webkit-details-marker { display: none; }
+    .lang-switch summary::marker { content: ""; }
+    .lang-switch summary:hover, .lang-switch[open] summary { color: #fff; }
+    .lang-menu { position: absolute; inset-inline-end: 0; top: calc(100% + 12px); z-index: 60; display: flex; flex-direction: column; gap: 2px; min-width: 160px; background: #fff; border: 1px solid var(--border); border-radius: 14px; box-shadow: 0 14px 40px rgba(0,0,0,0.18); padding: 8px; }
+    .lang-menu a { margin-inline-start: 0; padding: 9px 12px; border-radius: 9px; font-size: 14px; font-weight: 600; color: var(--text); }
+    .lang-menu a:hover { background: #f0fdf4; }
+    .lang-menu a[aria-current="page"] { color: var(--teal); font-weight: 800; background: #f0fdf4; pointer-events: none; }
 
     .page-header { background: var(--teal); color: #fff; padding: 48px 24px 40px; text-align: center; }
     .page-header h1 { font-size: 32px; font-weight: 800; margin-bottom: 8px; }
@@ -79,13 +85,16 @@
   <div>
     <a href="support.fr.html">Assistance</a>
     <a href="privacy.fr.html">Confidentialité</a>
-    <span class="lang-switch" aria-label="Langue">
-      <a href="support.html" lang="en">EN</a>
-      <a href="support.ar.html" lang="ar" title="العربية">AR</a>
-      <a href="support.es.html" lang="es" title="Español">ES</a>
-      <a href="support.fr.html" lang="fr" title="Français" aria-current="page">FR</a>
-      <a href="support.tr.html" lang="tr" title="Türkçe">TR</a>
-    </span>
+    <details class="lang-switch">
+      <summary aria-label="Changer de langue">🌐 Français</summary>
+      <div class="lang-menu">
+        <a href="support.html" lang="en">English</a>
+        <a href="support.ar.html" lang="ar">العربية</a>
+        <a href="support.es.html" lang="es">Español</a>
+        <a href="support.fr.html" lang="fr" aria-current="page">Français</a>
+        <a href="support.tr.html" lang="tr">Türkçe</a>
+      </div>
+    </details>
   </div>
 </nav>
 

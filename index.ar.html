@@ -110,19 +110,73 @@
     }
 
     .lang-switch {
+      position: relative;
+      margin-inline-start: 4px;
+      padding-inline-start: 16px;
+      border-inline-start: 1px solid var(--line);
+    }
+
+    .lang-switch summary {
       display: inline-flex;
       align-items: center;
-      gap: 10px;
-      padding-inline-start: 16px;
-      margin-inline-start: 4px;
-      border-inline-start: 1px solid var(--line);
+      gap: 6px;
+      cursor: pointer;
+      list-style: none;
+      padding: 6px 12px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      background: white;
       font-size: 13px;
       font-weight: 700;
       color: var(--muted);
     }
 
-    .lang-switch a[aria-current="page"] {
+    .lang-switch summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .lang-switch summary::marker {
+      content: "";
+    }
+
+    .lang-switch summary:hover,
+    .lang-switch[open] summary {
       color: var(--teal-dark);
+      border-color: var(--teal);
+    }
+
+    .lang-menu {
+      position: absolute;
+      inset-inline-end: 0;
+      top: calc(100% + 8px);
+      z-index: 60;
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+      min-width: 160px;
+      background: white;
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      box-shadow: var(--shadow);
+      padding: 8px;
+    }
+
+    .lang-menu a {
+      padding: 9px 12px;
+      border-radius: 9px;
+      font-size: 14px;
+      font-weight: 650;
+      color: var(--ink);
+    }
+
+    .lang-menu a:hover {
+      background: var(--teal-soft);
+    }
+
+    .lang-menu a[aria-current="page"] {
+      color: var(--teal-dark);
+      font-weight: 800;
+      background: var(--teal-soft);
       pointer-events: none;
     }
 
@@ -579,7 +633,7 @@
 </head>
 <body>
 <header class="nav">
-<div class="wrap nav-inner"><a class="brand" href="index.ar.html" aria-label="بَرَكَة — الصفحة الرئيسية"> <img class="brand-mark" src="images/icon.png" alt="Barakah app icon" width="38" height="38"> <span>بَرَكَة</span> </a><nav class="nav-links" aria-label="التنقل الرئيسي"><a href="#features">المزايا</a> <a href="#privacy">الخصوصية</a> <a href="support.ar.html">الدعم</a> <a href="privacy.ar.html">السياسة</a> <span class="lang-switch" aria-label="اللغة"><a href="index.html" lang="en">EN</a> <a href="index.ar.html" lang="ar" title="العربية" aria-current="page">AR</a> <a href="index.es.html" lang="es" title="Español">ES</a> <a href="index.fr.html" lang="fr" title="Français">FR</a> <a href="index.tr.html" lang="tr" title="Türkçe">TR</a></span></nav></div>
+<div class="wrap nav-inner"><a class="brand" href="index.ar.html" aria-label="بَرَكَة — الصفحة الرئيسية"> <img class="brand-mark" src="images/icon.png" alt="Barakah app icon" width="38" height="38"> <span>بَرَكَة</span> </a><nav class="nav-links" aria-label="التنقل الرئيسي"><a href="#features">المزايا</a> <a href="#privacy">الخصوصية</a> <a href="support.ar.html">الدعم</a> <a href="privacy.ar.html">السياسة</a> <details class="lang-switch"><summary aria-label="تغيير اللغة">🌐 العربية</summary><div class="lang-menu"><a href="index.html" lang="en">English</a><a href="index.ar.html" lang="ar" aria-current="page">العربية</a><a href="index.es.html" lang="es">Español</a><a href="index.fr.html" lang="fr">Français</a><a href="index.tr.html" lang="tr">Türkçe</a></div></details></nav></div>
 </header><main>
 <section class="hero">
 <div class="wrap hero-grid">
