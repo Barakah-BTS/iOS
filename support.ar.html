@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>الدعم — Barakah</title>
+  <meta name="description" content="احصل على المساعدة بخصوص Barakah. الأسئلة الشائعة، وأدلة الإعداد، ومعلومات التواصل.">
+  <link rel="icon" type="image/png" href="images/icon.png">
+  <link rel="apple-touch-icon" href="images/icon.png">
+
+  <link rel="alternate" hreflang="en" href="https://Barakah-app.github.io/iOS/support.html" />
+  <link rel="alternate" hreflang="ar" href="https://Barakah-app.github.io/iOS/support.ar.html" />
+  <link rel="alternate" hreflang="es" href="https://Barakah-app.github.io/iOS/support.es.html" />
+  <link rel="alternate" hreflang="fr" href="https://Barakah-app.github.io/iOS/support.fr.html" />
+  <link rel="alternate" hreflang="tr" href="https://Barakah-app.github.io/iOS/support.tr.html" />
+  <link rel="alternate" hreflang="x-default" href="https://Barakah-app.github.io/iOS/support.html" />
+  <style>
+    :root {
+      --teal: #45B8AC;
+      --teal-dark: #339990;
+      --cream: #FDF8F2;
+      --text: #1a1a1a;
+      --muted: #6b7280;
+      --card-bg: #ffffff;
+      --border: #e5e7eb;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; background: var(--cream); color: var(--text); }
+
+    nav { background: var(--teal); padding: 0 24px; display: flex; align-items: center; justify-content: space-between; height: 56px; }
+    nav .logo { color: #fff; font-weight: 700; font-size: 18px; text-decoration: none; display: flex; align-items: center; gap: 10px; }
+    nav .logo img { width: 28px; height: 28px; border-radius: 7px; }
+    nav a { color: rgba(255,255,255,0.85); text-decoration: none; font-size: 14px; margin-inline-start: 24px; }
+    nav a:hover { color: #fff; }
+
+    .lang-switch { display: inline-flex; align-items: center; gap: 10px; padding-inline-start: 18px; margin-inline-start: 18px; border-inline-start: 1px solid rgba(255,255,255,0.3); font-size: 13px; font-weight: 700; }
+    .lang-switch a { margin-inline-start: 0; }
+    .lang-switch a[aria-current="page"] { color: #fff; pointer-events: none; }
+
+    .page-header { background: var(--teal); color: #fff; padding: 48px 24px 40px; text-align: center; }
+    .page-header h1 { font-size: 32px; font-weight: 800; margin-bottom: 8px; }
+    .page-header p { font-size: 16px; opacity: 0.88; }
+
+    .content { max-width: 800px; margin: 0 auto; padding: 48px 24px 80px; }
+
+    .contact-card { background: var(--teal); color: #fff; border-radius: 16px; padding: 28px 32px; margin-bottom: 48px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px; }
+    .contact-card h2 { font-size: 20px; font-weight: 700; margin-bottom: 4px; }
+    .contact-card p { font-size: 15px; opacity: 0.9; }
+    .contact-card a { display: inline-block; margin-top: 12px; background: #fff; color: var(--teal); font-weight: 700; font-size: 14px; padding: 10px 22px; border-radius: 50px; text-decoration: none; }
+    .contact-card a:hover { background: rgba(255,255,255,0.9); }
+
+    h2.section-title { font-size: 22px; font-weight: 800; margin-bottom: 20px; }
+
+    .faq-group { margin-bottom: 40px; }
+    .faq-group h3 { font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--teal); margin-bottom: 12px; }
+
+    details { background: var(--card-bg); border: 1px solid var(--border); border-radius: 12px; margin-bottom: 8px; overflow: hidden; }
+    summary { padding: 16px 20px; font-size: 15px; font-weight: 600; cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center; }
+    summary::-webkit-details-marker { display: none; }
+    summary::after { content: '+'; font-size: 20px; font-weight: 400; color: var(--teal); flex-shrink: 0; margin-left: 12px; }
+    details[open] summary::after { content: '−'; }
+    .faq-body { padding: 0 20px 16px; font-size: 14px; color: #374151; line-height: 1.7; }
+    .faq-body p { margin-bottom: 8px; }
+    .faq-body ul { padding-left: 20px; }
+    .faq-body li { margin-bottom: 4px; }
+    .faq-body a { color: var(--teal); text-decoration: none; }
+    .faq-body a:hover { text-decoration: underline; }
+
+    footer { background: #1a1a1a; color: rgba(255,255,255,0.6); text-align: center; padding: 32px 24px; font-size: 14px; }
+    footer a { color: rgba(255,255,255,0.75); text-decoration: none; margin: 0 12px; }
+    footer a:hover { color: var(--teal); }
+    footer .copyright { margin-top: 12px; font-size: 13px; opacity: 0.5; }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a class="logo" href="index.html"><img src="images/icon.png" alt="">بَرَكَة</a>
+  <div>
+    <a href="support.html">الدعم</a>
+    <a href="privacy.html">الخصوصية</a>
+    <span class="lang-switch" aria-label="اللغة">
+      <a href="support.html" lang="en">EN</a>
+      <a href="support.ar.html" lang="ar" title="العربية" aria-current="page">AR</a>
+      <a href="support.es.html" lang="es" title="Español">ES</a>
+      <a href="support.fr.html" lang="fr" title="Français">FR</a>
+      <a href="support.tr.html" lang="tr" title="Türkçe">TR</a>
+    </span>
+  </div>
+</nav>
+
+<div class="page-header">
+  <h1>الدعم</h1>
+  <p>إجابات عن الأسئلة الشائعة وطرق الحصول على المساعدة.</p>
+</div>
+
+<div class="content">
+
+  <div class="contact-card">
+    <div>
+      <h2>لم تجد إجابتك؟</h2>
+      <p>راسلنا وسنرد عليك خلال 1–2 يوم عمل.</p>
+      <a href="mailto:barakah-app@proton.me">barakah-app@proton.me</a>
+    </div>
+  </div>
+
+  <h2 class="section-title">الأسئلة الشائعة</h2>
+
+  <!-- Getting Started -->
+  <div class="faq-group">
+    <h3>البدء</h3>
+
+    <details>
+      <summary>هل أحتاج إلى إنشاء حساب؟</summary>
+      <div class="faq-body">
+        <p>لا. لا يتطلب Barakah أي حساب، ولا تسجيل دخول، ولا عنوان بريد إلكتروني. ما عليك سوى فتح التطبيق والبدء بالتتبع. تُخزَّن بياناتك على جهازك وتتم مزامنتها بشكل خاص عبر حساب iCloud الخاص بك.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary>كيف أضيف طفلي؟</summary>
+      <div class="faq-body">
+        <p>عند أول تشغيل، سيطلب منك التطبيق إنشاء عائلتك وإضافة طفلك الأول. يمكنك إضافة أطفال إضافيين في أي وقت من <strong>الإعدادات ← إضافة طفل</strong>.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary>هل يمكنني تتبع أكثر من طفل؟</summary>
+      <div class="faq-body">
+        <p>نعم. أضف بقدر ما تحتاج من الأطفال من <strong>الإعدادات ← إضافة طفل</strong>. وتنقّل بين الأطفال باستخدام محدد الطفل أعلى لوحة المعلومات.</p>
+      </div>
+    </details>
+  </div>
+
+  <!-- iCloud & Sync -->
+  <div class="faq-group">
+    <h3>iCloud والمزامنة</h3>
+
+    <details>
+      <summary>كيف تعمل مزامنة iCloud؟</summary>
+      <div class="faq-body">
+        <p>يستخدم Barakah خدمة Apple CloudKit لمزامنة بياناتك بشكل خاص عبر حساب iCloud الخاص بك. تنتقل بياناتك مباشرة بين أجهزتك — ولا تمر أبدًا عبر أي خادم تُشغّله Barakah Corp.</p>
+        <p>المزامنة مفعّلة دائمًا — تأكد فقط من تسجيل الدخول إلى iCloud على جهازك ومن تفعيل iCloud Drive ضمن <strong>إعدادات iPhone ← [اسمك] ← iCloud ← iCloud Drive</strong>.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary>بياناتي لا تتم مزامنتها. ماذا أفعل؟</summary>
+      <div class="faq-body">
+        <ul>
+          <li>تأكد من تسجيل الدخول إلى iCloud وتفعيل iCloud Drive على جميع الأجهزة.</li>
+          <li>تحقق من مساحة تخزين iCloud — إذا كانت ممتلئة، ستتوقف المزامنة مؤقتًا.</li>
+          <li>افتح التطبيق على كل جهاز وانتظر بضع دقائق. مزامنة CloudKit شبه فورية لكنها ليست لحظية تمامًا.</li>
+          <li>أغلق التطبيق بالكامل ثم أعد فتحه لبدء فحص مزامنة جديد.</li>
+          <li>تحقق من مؤشر حالة مزامنة iCloud من <strong>الإعدادات ← تشخيص المزامنة</strong>.</li>
+        </ul>
+      </div>
+    </details>
+
+    <details>
+      <summary>حصلت على iPhone جديد. كيف أستعيد بياناتي؟</summary>
+      <div class="faq-body">
+        <p>إذا نقلت بيانات هاتفك الجديد من هاتفك القديم (عبر نسخة iCloud احتياطية أو نقل مباشر)، فسيتم نقل التطبيق وجميع البيانات تلقائيًا.</p>
+        <p>أما إذا أعددت هاتفك الجديد من الصفر، فثبّت Barakah من App Store، وسجّل الدخول إلى iCloud بنفس معرّف Apple، وستتم مزامنة بياناتك تلقائيًا خلال دقائق قليلة.</p>
+      </div>
+    </details>
+  </div>
+
+  <!-- Family Sharing -->
+  <div class="faq-group">
+    <h3>مشاركة العائلة ومقدمو الرعاية</h3>
+
+    <details>
+      <summary>كيف أشارك مع شريكي أو مع أحد مقدمي الرعاية؟</summary>
+      <div class="faq-body">
+        <p>انتقل إلى <strong>الإعدادات ← دعوة عضو</strong>. اختر دورًا (والد/والدة، مقدّم رعاية، مُشاهد، إلخ) وتاريخ انتهاء اختياريًا، ثم شارك الرابط الذي تم إنشاؤه عبر iMessage أو AirDrop أو أي وسيلة أخرى. يقوم الشخص الآخر بالنقر على الرابط من هاتفه الذي يحتوي على Barakah مثبتًا.</p>
+        <p>يلزم اشتراك Barakah Premium لدعوة مقدمي الرعاية.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary>ماذا يمكن لكل دور أن يفعل؟</summary>
+      <div class="faq-body">
+        <ul>
+          <li><strong>المالك / الوالد:</strong> صلاحية كاملة للقراءة والكتابة. يمكنه إدارة أفراد العائلة والإعدادات.</li>
+          <li><strong>مقدّم الرعاية:</strong> يمكنه تسجيل الرضاعة والنوم والحفاضات والنمو والأدوية ومراحل التطور وقياسات الحرارة.</li>
+          <li><strong>مقدّم رعاية مؤقت:</strong> نفس صلاحيات مقدّم الرعاية، لكن الوصول ينتهي تلقائيًا في تاريخ محدد.</li>
+          <li><strong>المُشاهد:</strong> للقراءة فقط. يمكنه رؤية السجلات لكن لا يمكنه إضافة أو تعديل الإدخالات.</li>
+        </ul>
+      </div>
+    </details>
+
+    <details>
+      <summary>كيف أزيل أحد أفراد العائلة؟</summary>
+      <div class="faq-body">
+        <p>انتقل إلى <strong>الإعدادات ← أفراد العائلة</strong>، ثم مرر لليسار على العضو الذي تريد إزالته واضغط على <strong>إزالة</strong>. لا يمكن إزالة المالك الأخير.</p>
+      </div>
+    </details>
+  </div>
+
+  <!-- Feeding -->
+  <div class="faq-group">
+    <h3>متتبع الرضاعة</h3>
+
+    <details>
+      <summary>كيف أسجل رضعة باستخدام Siri؟</summary>
+      <div class="faq-body">
+        <p>قل لـ Siri: <strong>"سجّل رضعة في Barakah"</strong>. يمكنك تحديد النوع (حليب صناعي، رضاعة طبيعية، شفط) والكمية. سيؤكد Barakah ويحفظ الإدخال دون الحاجة لفتح التطبيق.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary>ماذا تعرض أداة "آخر رضعة"؟</summary>
+      <div class="faq-body">
+        <p>تعرض الأداة اسم الطفل النشط، والمدة منذ آخر رضعة، وشريط تقدم نحو موعد الرضعة المقترحة التالية بناءً على عمر طفلك. أضفها من قائمة أدوات الشاشة الرئيسية أو شاشة القفل في iPhone — ابحث عن "Barakah".</p>
+      </div>
+    </details>
+  </div>
+
+  <!-- Growth Charts -->
+  <div class="faq-group">
+    <h3>مخططات النمو</h3>
+
+    <details>
+      <summary>ما معايير مخططات النمو التي يستخدمها Barakah؟</summary>
+      <div class="faq-body">
+        <p>يتبع Barakah توصيات AAP (الأكاديمية الأمريكية لطب الأطفال):</p>
+        <ul>
+          <li><strong>الأعمار من 0 إلى 24 شهرًا:</strong> معايير نمو الطفل الصادرة عن WHO (2006)</li>
+          <li><strong>الأعمار من 2 إلى 5 سنوات:</strong> مخططات نمو CDC لعام 2000</li>
+        </ul>
+        <p>يتم تتبع ثلاثة مؤشرات: الوزن بالنسبة للعمر، والطول بالنسبة للعمر، والوزن بالنسبة للطول، ويعرض كل منها نطاقات المئينات P3 وP15 وP50 وP85 وP97.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary>لماذا تختلف نسبة المئين في التطبيق عن تلك التي يذكرها طبيبي؟</summary>
+      <div class="faq-body">
+        <p>قد تستخدم أنظمة السجلات الصحية الإلكترونية (EHR) المختلفة طرق تنعيم بيانات، أو مجموعات بيانات، أو خوارزميات لتقريب العمر مختلفة قليلًا. الفروقات الصغيرة أمر طبيعي. تأكد دائمًا من تقييمات النمو مع طبيب الأطفال — فـ Barakah مخصص للتتبع المعلوماتي وليس للتشخيص الطبي.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary>لا تظهر مخططات الطول بالنسبة للعمر والوزن بالنسبة للطول. لماذا؟</summary>
+      <div class="faq-body">
+        <p>لا تُفتح هذه المخططات إلا بعد تسجيل إدخال نمو واحد على الأقل يتضمن قياس الطول. انتقل إلى تبويب <strong>التقرير</strong> وأضف إدخال نمو مع تعبئة الوزن <em>والطول</em>.</p>
+      </div>
+    </details>
+  </div>
+
+  <!-- Premium -->
+  <div class="faq-group">
+    <h3>Barakah Premium</h3>
+
+    <details>
+      <summary>ما الذي يتضمنه اشتراك Barakah Premium؟</summary>
+      <div class="faq-body">
+        <p>ميزات التتبع الأساسية مجانية دائمًا: الرضاعة، والنوم، والحفاضات، ومخططات النمو، ومراحل التطور، والأدوية، وسجل درجة الحرارة. ويتيح اشتراك Barakah Premium:</p>
+        <ul>
+          <li>تقارير PDF لطبيب الأطفال تتضمن مئينات النمو وفق WHO/CDC، والمعدلات اليومية، وسجل درجة الحرارة</li>
+          <li>مخططات متقدمة وتقارير اتجاهات أسبوعية</li>
+          <li>مزامنة العائلة — دعوة مقدمي الرعاية بصلاحيات وفق الأدوار (والد/والدة، مقدّم رعاية، مُشاهد)</li>
+          <li>تذكيرات الأدوية</li>
+          <li>سجل مئينات النمو</li>
+          <li>مظاهر مخصصة</li>
+          <li>نسخ احتياطية مشفّرة</li>
+        </ul>
+      </div>
+    </details>
+
+    <details>
+      <summary>كيف أستعيد مشترياتي على جهاز جديد؟</summary>
+      <div class="faq-body">
+        <p>انتقل إلى <strong>الإعدادات ← Barakah Premium</strong> واضغط على <strong>استعادة المشتريات</strong>. تأكد من تسجيل الدخول بنفس معرّف Apple المستخدم في عملية الشراء الأصلية.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary>كيف ألغي اشتراكي؟</summary>
+      <div class="faq-body">
+        <p>انتقل إلى <strong>إعدادات iPhone ← [اسمك] ← الاشتراكات</strong>، واختر Barakah، واضغط على <strong>إلغاء الاشتراك</strong>. يسري الإلغاء في نهاية فترة الفوترة الحالية.</p>
+      </div>
+    </details>
+  </div>
+
+  <!-- Privacy & Data -->
+  <div class="faq-group">
+    <h3>الخصوصية والبيانات</h3>
+
+    <details>
+      <summary>كيف أحذف جميع بياناتي؟</summary>
+      <div class="faq-body">
+        <p><strong>إذا كنت مالك العائلة:</strong> من إعدادات التطبيق، اختر <strong>إزالة من هذا الجهاز</strong> لمسح نسخة هذا الجهاز والإبقاء على بياناتك في iCloud، أو <strong>حذف بيانات العائلة وiCloud</strong> لحذف كل شيء نهائيًا لجميع أفراد العائلة.</p>
+        <p><strong>إذا كنت أحد أفراد العائلة:</strong> من إعدادات التطبيق، اختر <strong>مغادرة العائلة</strong> لإزالة وصول هذا الجهاز — ولن يتأثر أبدًا بيانات المالك.</p>
+        <p><strong>من iCloud مباشرة:</strong> انتقل إلى <strong>إعدادات iPhone ← [اسمك] ← iCloud ← إدارة تخزين الحساب ← Barakah ← حذف البيانات</strong>.</p>
+        <p>حذف التطبيق يزيل أيضًا جميع البيانات المحلية.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary>هل يُرسل Barakah بياناتي إلى أي خادم؟</summary>
+      <div class="faq-body">
+        <p>لا. لا يملك Barakah أي خادم تطبيقات تابع لجهة خارجية. تعيش جميع البيانات على جهازك وتتم مزامنتها بشكل خاص عبر حساب iCloud الخاص بك. ليس لدينا أي وصول إلى بياناتك. طالع <a href="privacy.html">سياسة الخصوصية</a> الكاملة.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary>كيف أقفل التطبيق باستخدام Face ID أو Touch ID؟</summary>
+      <div class="faq-body">
+        <p>يطلب التطبيق تلقائيًا Face ID / Touch ID (أو رمز المرور كبديل) في كل مرة يُفتح فيها. لقفله يدويًا وفورًا، انتقل إلى <strong>الإعدادات ← قفل التطبيق</strong> أو استخدم إجراء "قفل التطبيق" في تطبيق Shortcuts.</p>
+      </div>
+    </details>
+  </div>
+
+</div>
+
+<footer>
+  <div>
+    <a href="privacy.html">سياسة الخصوصية</a>
+    <a href="support.html">الدعم</a>
+    <a href="mailto:barakah-app@proton.me">تواصل معنا</a>
+  </div>
+  <p class="copyright">© 2026 AbdurRahman Rozell / Barakah Corp. جميع الحقوق محفوظة.</p>
+</footer>
+
+</body>
+</html>

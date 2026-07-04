@@ -7,6 +7,13 @@
   <meta name="description" content="Barakah privacy policy. Your data stays on your device and your private iCloud account. No third-party servers, no tracking.">
   <link rel="icon" type="image/png" href="images/icon.png">
   <link rel="apple-touch-icon" href="images/icon.png">
+
+  <link rel="alternate" hreflang="en" href="https://Barakah-app.github.io/iOS/privacy.html" />
+  <link rel="alternate" hreflang="ar" href="https://Barakah-app.github.io/iOS/privacy.ar.html" />
+  <link rel="alternate" hreflang="es" href="https://Barakah-app.github.io/iOS/privacy.es.html" />
+  <link rel="alternate" hreflang="fr" href="https://Barakah-app.github.io/iOS/privacy.fr.html" />
+  <link rel="alternate" hreflang="tr" href="https://Barakah-app.github.io/iOS/privacy.tr.html" />
+  <link rel="alternate" hreflang="x-default" href="https://Barakah-app.github.io/iOS/privacy.html" />
   <style>
     :root {
       --teal: #45B8AC;
@@ -23,8 +30,12 @@
     nav { background: var(--teal); padding: 0 24px; display: flex; align-items: center; justify-content: space-between; height: 56px; }
     nav .logo { color: #fff; font-weight: 700; font-size: 18px; text-decoration: none; display: flex; align-items: center; gap: 10px; }
     nav .logo img { width: 28px; height: 28px; border-radius: 7px; }
-    nav a { color: rgba(255,255,255,0.85); text-decoration: none; font-size: 14px; margin-left: 24px; }
+    nav a { color: rgba(255,255,255,0.85); text-decoration: none; font-size: 14px; margin-inline-start: 24px; }
     nav a:hover { color: #fff; }
+
+    .lang-switch { display: inline-flex; align-items: center; gap: 10px; padding-inline-start: 18px; margin-inline-start: 18px; border-inline-start: 1px solid rgba(255,255,255,0.3); font-size: 13px; font-weight: 700; }
+    .lang-switch a { margin-inline-start: 0; }
+    .lang-switch a[aria-current="page"] { color: #fff; pointer-events: none; }
 
     .page-header { background: var(--teal); color: #fff; padding: 48px 24px 40px; text-align: center; }
     .page-header h1 { font-size: 32px; font-weight: 800; margin-bottom: 8px; }
@@ -59,6 +70,13 @@
   <div>
     <a href="support.html">Support</a>
     <a href="privacy.html">Privacy</a>
+    <span class="lang-switch" aria-label="Language">
+      <a href="privacy.html" lang="en" aria-current="page">EN</a>
+      <a href="privacy.ar.html" lang="ar" title="العربية">AR</a>
+      <a href="privacy.es.html" lang="es" title="Español">ES</a>
+      <a href="privacy.fr.html" lang="fr" title="Français">FR</a>
+      <a href="privacy.tr.html" lang="tr" title="Türkçe">TR</a>
+    </span>
   </div>
 </nav>
 

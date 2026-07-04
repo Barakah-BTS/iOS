@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Destek — Barakah</title>
+  <meta name="description" content="Barakah ile ilgili yardım alın. Sıkça sorulan sorular, kurulum rehberleri ve iletişim bilgileri.">
+  <link rel="icon" type="image/png" href="images/icon.png">
+  <link rel="apple-touch-icon" href="images/icon.png">
+
+  <link rel="alternate" hreflang="en" href="https://Barakah-app.github.io/iOS/support.html" />
+  <link rel="alternate" hreflang="ar" href="https://Barakah-app.github.io/iOS/support.ar.html" />
+  <link rel="alternate" hreflang="es" href="https://Barakah-app.github.io/iOS/support.es.html" />
+  <link rel="alternate" hreflang="fr" href="https://Barakah-app.github.io/iOS/support.fr.html" />
+  <link rel="alternate" hreflang="tr" href="https://Barakah-app.github.io/iOS/support.tr.html" />
+  <link rel="alternate" hreflang="x-default" href="https://Barakah-app.github.io/iOS/support.html" />
+  <style>
+    :root {
+      --teal: #45B8AC;
+      --teal-dark: #339990;
+      --cream: #FDF8F2;
+      --text: #1a1a1a;
+      --muted: #6b7280;
+      --card-bg: #ffffff;
+      --border: #e5e7eb;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; background: var(--cream); color: var(--text); }
+
+    nav { background: var(--teal); padding: 0 24px; display: flex; align-items: center; justify-content: space-between; height: 56px; }
+    nav .logo { color: #fff; font-weight: 700; font-size: 18px; text-decoration: none; display: flex; align-items: center; gap: 10px; }
+    nav .logo img { width: 28px; height: 28px; border-radius: 7px; }
+    nav a { color: rgba(255,255,255,0.85); text-decoration: none; font-size: 14px; margin-inline-start: 24px; }
+    nav a:hover { color: #fff; }
+
+    .lang-switch { display: inline-flex; align-items: center; gap: 10px; padding-inline-start: 18px; margin-inline-start: 18px; border-inline-start: 1px solid rgba(255,255,255,0.3); font-size: 13px; font-weight: 700; }
+    .lang-switch a { margin-inline-start: 0; }
+    .lang-switch a[aria-current="page"] { color: #fff; pointer-events: none; }
+
+    .page-header { background: var(--teal); color: #fff; padding: 48px 24px 40px; text-align: center; }
+    .page-header h1 { font-size: 32px; font-weight: 800; margin-bottom: 8px; }
+    .page-header p { font-size: 16px; opacity: 0.88; }
+
+    .content { max-width: 800px; margin: 0 auto; padding: 48px 24px 80px; }
+
+    .contact-card { background: var(--teal); color: #fff; border-radius: 16px; padding: 28px 32px; margin-bottom: 48px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px; }
+    .contact-card h2 { font-size: 20px; font-weight: 700; margin-bottom: 4px; }
+    .contact-card p { font-size: 15px; opacity: 0.9; }
+    .contact-card a { display: inline-block; margin-top: 12px; background: #fff; color: var(--teal); font-weight: 700; font-size: 14px; padding: 10px 22px; border-radius: 50px; text-decoration: none; }
+    .contact-card a:hover { background: rgba(255,255,255,0.9); }
+
+    h2.section-title { font-size: 22px; font-weight: 800; margin-bottom: 20px; }
+
+    .faq-group { margin-bottom: 40px; }
+    .faq-group h3 { font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--teal); margin-bottom: 12px; }
+
+    details { background: var(--card-bg); border: 1px solid var(--border); border-radius: 12px; margin-bottom: 8px; overflow: hidden; }
+    summary { padding: 16px 20px; font-size: 15px; font-weight: 600; cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center; }
+    summary::-webkit-details-marker { display: none; }
+    summary::after { content: '+'; font-size: 20px; font-weight: 400; color: var(--teal); flex-shrink: 0; margin-left: 12px; }
+    details[open] summary::after { content: '−'; }
+    .faq-body { padding: 0 20px 16px; font-size: 14px; color: #374151; line-height: 1.7; }
+    .faq-body p { margin-bottom: 8px; }
+    .faq-body ul { padding-left: 20px; }
+    .faq-body li { margin-bottom: 4px; }
+    .faq-body a { color: var(--teal); text-decoration: none; }
+    .faq-body a:hover { text-decoration: underline; }
+
+    footer { background: #1a1a1a; color: rgba(255,255,255,0.6); text-align: center; padding: 32px 24px; font-size: 14px; }
+    footer a { color: rgba(255,255,255,0.75); text-decoration: none; margin: 0 12px; }
+    footer a:hover { color: var(--teal); }
+    footer .copyright { margin-top: 12px; font-size: 13px; opacity: 0.5; }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a class="logo" href="index.html"><img src="images/icon.png" alt="">Barakah</a>
+  <div>
+    <a href="support.html">Destek</a>
+    <a href="privacy.html">Gizlilik</a>
+    <span class="lang-switch" aria-label="Dil">
+      <a href="support.html" lang="en">EN</a>
+      <a href="support.ar.html" lang="ar" title="العربية">AR</a>
+      <a href="support.es.html" lang="es" title="Español">ES</a>
+      <a href="support.fr.html" lang="fr" title="Français">FR</a>
+      <a href="support.tr.html" lang="tr" title="Türkçe" aria-current="page">TR</a>
+    </span>
+  </div>
+</nav>
+
+<div class="page-header">
+  <h1>Destek</h1>
+  <p>Sık sorulan soruların cevapları ve yardım almanın yolları.</p>
+</div>
+
+<div class="content">
+
+  <div class="contact-card">
+    <div>
+      <h2>Aradığınız cevabı bulamadınız mı?</h2>
+      <p>Bize e-posta gönderin, 1-2 iş günü içinde size dönüş yapalım.</p>
+      <a href="mailto:barakah-app@proton.me">barakah-app@proton.me</a>
+    </div>
+  </div>
+
+  <h2 class="section-title">Sıkça Sorulan Sorular</h2>
+
+  <!-- Getting Started -->
+  <div class="faq-group">
+    <h3>Başlarken</h3>
+
+    <details>
+      <summary>Hesap oluşturmam gerekiyor mu?</summary>
+      <div class="faq-body">
+        <p>Hayır. Barakah hesap, oturum açma veya e-posta adresi gerektirmez. Uygulamayı açın ve takibe başlayın. Verileriniz cihazınızda saklanır ve kendi iCloud hesabınız üzerinden özel olarak senkronize edilir.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary>Bebeğimi nasıl eklerim?</summary>
+      <div class="faq-body">
+        <p>İlk açılışta uygulama sizden ailenizi oluşturmanızı ve ilk çocuğunuzu eklemenizi ister. <strong>Ayarlar → Çocuk Ekle</strong> yolundan istediğiniz zaman ek çocuk ekleyebilirsiniz.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary>Birden fazla çocuğu takip edebilir miyim?</summary>
+      <div class="faq-body">
+        <p>Evet. <strong>Ayarlar → Çocuk Ekle</strong> yolundan ihtiyacınız kadar çocuk ekleyin. Panonun üstündeki çocuk seçiciyi kullanarak çocuklar arasında geçiş yapın.</p>
+      </div>
+    </details>
+  </div>
+
+  <!-- iCloud & Sync -->
+  <div class="faq-group">
+    <h3>iCloud ve Senkronizasyon</h3>
+
+    <details>
+      <summary>iCloud senkronizasyonu nasıl çalışır?</summary>
+      <div class="faq-body">
+        <p>Barakah, verilerinizi kendi iCloud hesabınız üzerinden özel olarak senkronize etmek için Apple CloudKit'i kullanır. Verileriniz doğrudan cihazlarınız arasında gider — Barakah Corp tarafından işletilen hiçbir sunucudan geçmez.</p>
+        <p>Senkronizasyon her zaman açıktır — yalnızca cihazınızda iCloud'a giriş yaptığınızdan ve <strong>iPhone Ayarlar → [adınız] → iCloud → iCloud Drive</strong> yolunda iCloud Drive'ın açık olduğundan emin olun.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary>Verilerim senkronize olmuyor. Ne yapmalıyım?</summary>
+      <div class="faq-body">
+        <ul>
+          <li>Tüm cihazlarda iCloud'a giriş yapıldığını ve iCloud Drive'ın etkin olduğunu doğrulayın.</li>
+          <li>iCloud depolama alanınızı kontrol edin — doluysa senkronizasyon duraklar.</li>
+          <li>Uygulamayı her cihazda açın ve birkaç dakika bekleyin. CloudKit senkronizasyonu neredeyse gerçek zamanlıdır ama anlık değildir.</li>
+          <li>Yeni bir senkronizasyon kontrolü tetiklemek için uygulamayı tamamen kapatıp yeniden açın.</li>
+          <li><strong>Ayarlar → Senkronizasyon Tanılaması</strong> bölümündeki iCloud senkronizasyon durumu göstergesini kontrol edin.</li>
+        </ul>
+      </div>
+    </details>
+
+    <details>
+      <summary>Yeni bir iPhone aldım. Verilerimi nasıl geri yüklerim?</summary>
+      <div class="faq-body">
+        <p>Yeni iPhone'unuzu eskisinden aktardıysanız (iCloud yedeği veya doğrudan aktarım yoluyla), uygulama ve tüm veriler otomatik olarak aktarılır.</p>
+        <p>Yeni iPhone'u sıfırdan kurduysanız, Barakah'ı App Store'dan yükleyin, aynı Apple ID ile iCloud'a giriş yapın; verileriniz birkaç dakika içinde otomatik olarak senkronize olacaktır.</p>
+      </div>
+    </details>
+  </div>
+
+  <!-- Family Sharing -->
+  <div class="faq-group">
+    <h3>Aile Paylaşımı ve Bakıcılar</h3>
+
+    <details>
+      <summary>Eşimle veya bir bakıcıyla nasıl paylaşırım?</summary>
+      <div class="faq-body">
+        <p><strong>Ayarlar → Üye Davet Et</strong> yoluna gidin. Bir rol seçin (Ebeveyn, Bakıcı, Görüntüleyici vb.) ve isteğe bağlı bir son kullanma tarihi belirleyin, ardından oluşturulan bağlantıyı iMessage, AirDrop veya başka bir yöntemle paylaşın. Karşı taraf, Barakah kurulu iPhone'unda bağlantıya dokunur.</p>
+        <p>Bakıcı davet etmek için Barakah Premium gereklidir.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary>Her rol ne yapabilir?</summary>
+      <div class="faq-body">
+        <ul>
+          <li><strong>Sahip / Ebeveyn:</strong> Tam okuma ve yazma erişimi. Aile üyelerini ve ayarları yönetebilir.</li>
+          <li><strong>Bakıcı:</strong> Beslenme, uyku, bez, büyüme, ilaç, gelişim aşaması ve sıcaklık girişlerini kaydedebilir.</li>
+          <li><strong>Geçici Bakıcı:</strong> Bakıcı ile aynıdır, ancak erişim belirlenen tarihte otomatik olarak sona erer.</li>
+          <li><strong>Görüntüleyici:</strong> Yalnızca okuma. Kayıtları görebilir ancak giriş ekleyemez veya düzenleyemez.</li>
+        </ul>
+      </div>
+    </details>
+
+    <details>
+      <summary>Bir aile üyesini nasıl kaldırırım?</summary>
+      <div class="faq-body">
+        <p><strong>Ayarlar → Aile Üyeleri</strong> yoluna gidin, kaldırmak istediğiniz üyeyi sola kaydırın ve <strong>Kaldır</strong>'a dokunun. Son sahip kaldırılamaz.</p>
+      </div>
+    </details>
+  </div>
+
+  <!-- Feeding -->
+  <div class="faq-group">
+    <h3>Beslenme Takibi</h3>
+
+    <details>
+      <summary>Siri ile bir beslenme kaydını nasıl girerim?</summary>
+      <div class="faq-body">
+        <p>Siri'ye <strong>"Barakah'ta bir beslenme kaydet"</strong> deyin. Türü (mama, emzirme, pompalama) ve miktarı belirtebilirsiniz. Barakah, uygulamayı açmanıza gerek kalmadan girişi onaylar ve kaydeder.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary>"Son Beslenme" widget'ı ne gösterir?</summary>
+      <div class="faq-body">
+        <p>Widget, aktif çocuğunuzun adını, son beslenmenin ne kadar zaman önce olduğunu ve bebeğinizin yaşına göre önerilen bir sonraki beslenme aralığına doğru ilerleme çubuğunu gösterir. iPhone'unuzun Ana Ekran veya Kilit Ekranı widget seçicisinden "Barakah" araması yaparak ekleyin.</p>
+      </div>
+    </details>
+  </div>
+
+  <!-- Growth Charts -->
+  <div class="faq-group">
+    <h3>Büyüme Grafikleri</h3>
+
+    <details>
+      <summary>Barakah hangi büyüme grafiği standartlarını kullanır?</summary>
+      <div class="faq-body">
+        <p>Barakah, AAP (Amerikan Pediatri Akademisi) önerilerini takip eder:</p>
+        <ul>
+          <li><strong>0-24 ay:</strong> WHO Çocuk Büyüme Standartları (2006)</li>
+          <li><strong>2-5 yaş:</strong> CDC 2000 Büyüme Grafikleri</li>
+        </ul>
+        <p>Üç gösterge takip edilir: Yaşa Göre Ağırlık, Yaşa Göre Boy ve Boya Göre Ağırlık; her biri P3, P15, P50, P85 ve P97 yüzdelik dilim bantlarını gösterir.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary>Uygulamamdaki yüzdelik dilim neden doktorumunkinden farklı?</summary>
+      <div class="faq-body">
+        <p>Farklı elektronik sağlık kaydı (EHR) sistemleri biraz farklı düzleştirme yöntemleri, veri kümeleri veya yaş yuvarlama algoritmaları kullanabilir. Küçük farklılıklar normaldir. Büyüme değerlendirmelerini her zaman çocuk doktorunuzla teyit edin — Barakah bilgilendirme amaçlı takip içindir, tıbbi teşhis için değildir.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary>Yaşa Göre Boy ve Boya Göre Ağırlık grafikleri görünmüyor. Neden?</summary>
+      <div class="faq-body">
+        <p>Bu grafikler yalnızca boy ölçümü içeren en az bir büyüme girişi kaydettiğinizde açılır. <strong>Rapor</strong> sekmesine gidin ve hem ağırlık hem de boy doldurulmuş bir büyüme girişi ekleyin.</p>
+      </div>
+    </details>
+  </div>
+
+  <!-- Premium -->
+  <div class="faq-group">
+    <h3>Barakah Premium</h3>
+
+    <details>
+      <summary>Barakah Premium'a neler dahildir?</summary>
+      <div class="faq-body">
+        <p>Temel takip özellikleri her zaman ücretsizdir: beslenme, uyku, bez, büyüme grafikleri, gelişim aşamaları, ilaçlar ve sıcaklık kaydı. Barakah Premium şunların kilidini açar:</p>
+        <ul>
+          <li>WHO/CDC büyüme yüzdelik dilimleri, günlük ortalamalar ve sıcaklık geçmişi içeren PDF çocuk doktoru raporları</li>
+          <li>Gelişmiş grafikler ve haftalık eğilim raporları</li>
+          <li>Aile senkronizasyonu — role dayalı erişimle bakıcı davet etme (Ebeveyn, Bakıcı, Görüntüleyici)</li>
+          <li>İlaç hatırlatıcıları</li>
+          <li>Büyüme yüzdelik dilimi geçmişi</li>
+          <li>Özel temalar</li>
+          <li>Şifreli yedeklemeler</li>
+        </ul>
+      </div>
+    </details>
+
+    <details>
+      <summary>Satın alımımı yeni bir cihazda nasıl geri yüklerim?</summary>
+      <div class="faq-body">
+        <p><strong>Ayarlar → Barakah Premium</strong> yoluna gidin ve <strong>Satın Alımları Geri Yükle</strong>'ye dokunun. İlk satın alımda kullanılan aynı Apple ID ile giriş yaptığınızdan emin olun.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary>Aboneliğimi nasıl iptal ederim?</summary>
+      <div class="faq-body">
+        <p><strong>iPhone Ayarlar → [adınız] → Abonelikler</strong> yoluna gidin, Barakah'ı seçin ve <strong>Aboneliği İptal Et</strong>'e dokunun. İptaller mevcut fatura döneminin sonunda geçerli olur.</p>
+      </div>
+    </details>
+  </div>
+
+  <!-- Privacy & Data -->
+  <div class="faq-group">
+    <h3>Gizlilik ve Veriler</h3>
+
+    <details>
+      <summary>Tüm verilerimi nasıl silerim?</summary>
+      <div class="faq-body">
+        <p><strong>Aile sahibiyseniz:</strong> Uygulamanın Ayarlar bölümünde, bu cihazın kopyasını temizlerken verilerinizi iCloud'da tutmak için <strong>Bu Cihazdan Kaldır</strong> seçeneğini veya her aile üyesi için her şeyi kalıcı olarak silmek için <strong>Aileyi ve iCloud Verilerini Sil</strong> seçeneğini kullanın.</p>
+        <p><strong>Bir aile üyesiyseniz:</strong> Uygulamanın Ayarlar bölümünde, bu cihazın erişimini kaldırmak için <strong>Aileden Ayrıl</strong> seçeneğini kullanın — sahibin verileri hiçbir şekilde etkilenmez.</p>
+        <p><strong>Doğrudan iCloud üzerinden:</strong> <strong>iPhone Ayarlar → [adınız] → iCloud → Hesap Depolamasını Yönet → Barakah → Verileri Sil</strong> yoluna gidin.</p>
+        <p>Uygulamayı silmek tüm yerel verileri de kaldırır.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary>Barakah verilerimi herhangi bir sunucuya gönderiyor mu?</summary>
+      <div class="faq-body">
+        <p>Hayır. Barakah'ın üçüncü taraf bir uygulama sunucusu yoktur. Tüm veriler cihazınızda bulunur ve kendi özel iCloud hesabınız üzerinden özel olarak senkronize edilir. Verilerinize erişimimiz yoktur. Tam <a href="privacy.html">Gizlilik Politikamıza</a> bakın.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary>Uygulamayı Face ID veya Touch ID ile nasıl kilitlerim?</summary>
+      <div class="faq-body">
+        <p>Uygulama her açıldığında otomatik olarak Face ID / Touch ID (veya alternatif olarak parolanızı) ister. Uygulamayı hemen manuel olarak kilitlemek için <strong>Ayarlar → Uygulamayı Kilitle</strong>'ye gidin veya Kısayollar uygulamasındaki Uygulamayı Kilitle eylemini kullanın.</p>
+      </div>
+    </details>
+  </div>
+
+</div>
+
+<footer>
+  <div>
+    <a href="privacy.html">Gizlilik Politikası</a>
+    <a href="support.html">Destek</a>
+    <a href="mailto:barakah-app@proton.me">İletişim</a>
+  </div>
+  <p class="copyright">© 2026 AbdurRahman Rozell / Barakah Corp. Tüm hakları saklıdır.</p>
+</footer>
+
+</body>
+</html>

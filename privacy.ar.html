@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>سياسة الخصوصية — Barakah</title>
+  <meta name="description" content="سياسة خصوصية Barakah. تبقى بياناتك على جهازك وفي حساب iCloud الخاص بك. بدون خوادم من جهات خارجية، وبدون تتبع.">
+  <link rel="icon" type="image/png" href="images/icon.png">
+  <link rel="apple-touch-icon" href="images/icon.png">
+
+  <link rel="alternate" hreflang="en" href="https://Barakah-app.github.io/iOS/privacy.html" />
+  <link rel="alternate" hreflang="ar" href="https://Barakah-app.github.io/iOS/privacy.ar.html" />
+  <link rel="alternate" hreflang="es" href="https://Barakah-app.github.io/iOS/privacy.es.html" />
+  <link rel="alternate" hreflang="fr" href="https://Barakah-app.github.io/iOS/privacy.fr.html" />
+  <link rel="alternate" hreflang="tr" href="https://Barakah-app.github.io/iOS/privacy.tr.html" />
+  <link rel="alternate" hreflang="x-default" href="https://Barakah-app.github.io/iOS/privacy.html" />
+  <style>
+    :root {
+      --teal: #45B8AC;
+      --teal-dark: #339990;
+      --cream: #FDF8F2;
+      --text: #1a1a1a;
+      --muted: #6b7280;
+      --card-bg: #ffffff;
+      --border: #e5e7eb;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; background: var(--cream); color: var(--text); }
+
+    nav { background: var(--teal); padding: 0 24px; display: flex; align-items: center; justify-content: space-between; height: 56px; }
+    nav .logo { color: #fff; font-weight: 700; font-size: 18px; text-decoration: none; display: flex; align-items: center; gap: 10px; }
+    nav .logo img { width: 28px; height: 28px; border-radius: 7px; }
+    nav a { color: rgba(255,255,255,0.85); text-decoration: none; font-size: 14px; margin-inline-start: 24px; }
+    nav a:hover { color: #fff; }
+
+    .lang-switch { display: inline-flex; align-items: center; gap: 10px; padding-inline-start: 18px; margin-inline-start: 18px; border-inline-start: 1px solid rgba(255,255,255,0.3); font-size: 13px; font-weight: 700; }
+    .lang-switch a { margin-inline-start: 0; }
+    .lang-switch a[aria-current="page"] { color: #fff; pointer-events: none; }
+
+    .page-header { background: var(--teal); color: #fff; padding: 48px 24px 40px; text-align: center; }
+    .page-header h1 { font-size: 32px; font-weight: 800; margin-bottom: 8px; }
+    .page-header p { font-size: 16px; opacity: 0.88; }
+
+    .content { max-width: 760px; margin: 0 auto; padding: 48px 24px 80px; }
+
+    .tl-dr { background: #f0fdf4; border: 1px solid #bbf7d0; border-radius: 12px; padding: 20px 24px; margin-bottom: 40px; }
+    .tl-dr h2 { font-size: 16px; font-weight: 700; color: #15803d; margin-bottom: 10px; }
+    .tl-dr ul { padding-left: 20px; }
+    .tl-dr li { font-size: 15px; color: #166534; line-height: 1.7; }
+
+    h2 { font-size: 20px; font-weight: 700; margin: 36px 0 12px; color: var(--text); }
+    h2:first-of-type { margin-top: 0; }
+    p { font-size: 15px; color: #374151; line-height: 1.7; margin-bottom: 12px; }
+    ul { padding-left: 22px; margin-bottom: 12px; }
+    li { font-size: 15px; color: #374151; line-height: 1.7; }
+    a { color: var(--teal); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .updated { font-size: 13px; color: var(--muted); margin-bottom: 32px; }
+
+    footer { background: #1a1a1a; color: rgba(255,255,255,0.6); text-align: center; padding: 32px 24px; font-size: 14px; }
+    footer a { color: rgba(255,255,255,0.75); text-decoration: none; margin: 0 12px; }
+    footer a:hover { color: var(--teal); }
+    footer .copyright { margin-top: 12px; font-size: 13px; opacity: 0.5; }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a class="logo" href="index.html"><img src="images/icon.png" alt="">بَرَكَة</a>
+  <div>
+    <a href="support.html">الدعم</a>
+    <a href="privacy.html">الخصوصية</a>
+    <span class="lang-switch" aria-label="اللغة">
+      <a href="privacy.html" lang="en">EN</a>
+      <a href="privacy.ar.html" lang="ar" title="العربية" aria-current="page">AR</a>
+      <a href="privacy.es.html" lang="es" title="Español">ES</a>
+      <a href="privacy.fr.html" lang="fr" title="Français">FR</a>
+      <a href="privacy.tr.html" lang="tr" title="Türkçe">TR</a>
+    </span>
+  </div>
+</nav>
+
+<div class="page-header">
+  <h1>سياسة الخصوصية</h1>
+  <p>باختصار: بياناتك لا تغادر جهازك وحساب iCloud الخاص بك أبدًا.</p>
+</div>
+
+<div class="content">
+  <p class="updated">آخر تحديث: 26 يونيو 2026</p>
+
+  <div class="tl-dr">
+    <h2>&#x2705; النسخة المختصرة</h2>
+    <ul>
+      <li>لا يتطلب Barakah أي حساب، ولا تسجيل دخول، ولا اشتراكًا.</li>
+      <li>تُخزَّن جميع البيانات على جهاز iPhone/iPad الخاص بك، وفي حساب iCloud الخاص والمملوك لك.</li>
+      <li>لا نُشغّل أي خادم يخزّن بياناتك.</li>
+      <li>لا نبيع بياناتك أو نشاركها أو نجني منها المال بأي شكل من الأشكال.</li>
+      <li>لا نُضمّن أي أدوات تحليلات أو إعلانات من جهات خارجية.</li>
+      <li>يمكنك حذف جميع البيانات في أي وقت بحذف التطبيق.</li>
+    </ul>
+  </div>
+
+  <h2>1. من نحن</h2>
+  <p>يتم تطوير Barakah ("التطبيق") ونشره بواسطة AbdurRahman Rozell / Barakah Corp. لأي أسئلة حول هذه السياسة، يُرجى التواصل معنا عبر <a href="mailto:barakah-app@proton.me">barakah-app@proton.me</a>.</p>
+
+  <h2>2. البيانات التي يجمعها التطبيق</h2>
+  <p>يخزّن Barakah البيانات التي تُدخلها عن أطفالك وعائلتك. وقد تشمل:</p>
+  <ul>
+    <li><strong>معلومات الطفل:</strong> الاسم، تاريخ الميلاد، الجنس، صورة (اختياري)</li>
+    <li><strong>سجلات الصحة والرعاية:</strong> سجلات الرضاعة (النوع، الكمية، الوقت)، سجلات النوم (المدة، النوع)، تغييرات الحفاضات، قياسات النمو (الوزن، الطول)، الأدوية والجرعات، مراحل التطور</li>
+    <li><strong>معلومات أفراد العائلة:</strong> الأسماء والأدوار (والد/والدة، مقدّم رعاية، مُشاهد) للأشخاص الذين تدعوهم لمشاركة التطبيق</li>
+    <li><strong>تفضيلات التطبيق:</strong> وحدات العرض، اللغة، إعدادات التذكيرات</li>
+  </ul>
+  <p>يتم إدخال هذه البيانات من قِبلك وتبقى تحت سيطرتك الكاملة.</p>
+
+  <h2>3. أين تُخزَّن البيانات</h2>
+  <p>تُخزَّن جميع البيانات محليًا على جهازك باستخدام إطار عمل Core Data من Apple، وتتم مزامنتها مع قاعدة بياناتك الخاصة في iCloud عبر Apple CloudKit، لتكون متاحة عبر أجهزتك الخاصة ولمن تدعوهم إلى عائلتك. ليس لدينا أي وصول إلى بيانات iCloud الخاصة بك — فبنية Apple الخاصة بالخصوصية تضمن ألا يتمكن من قراءتها سواك أنت وأجهزتك وأي فرد من العائلة قمت بدعوته.</p>
+  <p>لا نُشغّل أي خادم تطبيقات، أو قاعدة بيانات سحابية، أو واجهة برمجة تطبيقات خلفية (API).</p>
+
+  <h2>4. مزامنة iCloud ومشاركة العائلة</h2>
+  <p>عند تفعيل مزامنة iCloud، يستخدم Barakah خدمة Apple CloudKit لمزامنة بياناتك عبر أجهزتك الشخصية. وإذا دعوت أفراد العائلة أو مقدمي الرعاية باستخدام ميزة "دعوة عضو" داخل التطبيق، يتم إنشاء رابط CKShare. ويمكن لأي شخص يملك هذا الرابط وحساب iCloud الانضمام إلى مجموعة عائلتك، ومشاهدة البيانات أو تعديلها وفقًا للدور الذي تمنحه له (والد/والدة، مقدّم رعاية، مُشاهد، إلخ).</p>
+  <p>تتم المزامنة بالكامل عبر بنية Apple التحتية. لا تتلقى Barakah Corp أي بيانات متزامنة، ولا تعالجها، ولا تخزّنها.</p>
+
+  <h2>5. معرّفات الجهاز</h2>
+  <p>يخزّن Barakah معرّف جهاز في Keychain الخاص بالنظام لربط الجهاز بسجل عضو العائلة. يُشتق هذا المعرّف من <code>UIDevice.identifierForVendor</code> الخاص بـ Apple ويبقى ثابتًا عبر عمليات إعادة التثبيت. يُستخدم فقط للتمييز بين الأجهزة داخل مجموعة عائلتك، ولا يُرسَل أبدًا إلى أي خادم تُشغّله Barakah Corp.</p>
+
+  <h2>6. الإشعارات المحلية</h2>
+  <p>إذا فعّلت التذكيرات، يقوم Barakah بجدولة إشعارات محلية عبر إطار عمل UserNotifications الخاص بـ Apple. لا تُرسَل أي بيانات متعلقة بالإشعارات خارج جهازك.</p>
+
+  <h2>7. أداة الشاشة الرئيسية (Widget)</h2>
+  <p>تقرأ أداة "آخر رضعة" بيانات الرضاعة من حاوية App Group مشتركة (منطقة تخزين خاصة على جهازك يمكن للتطبيق وامتداد الأداة الوصول إليها فقط). لا تُرسَل أي بيانات خارج الجهاز.</p>
+
+  <h2>8. Siri وApp Intents</h2>
+  <p>عند استخدام اختصارات Siri (مثل "سجّل رضعة في Barakah")، تتم معالجة طلب Siri بواسطة Apple على الجهاز نفسه أو عبر بنية Siri التحتية الخاصة بـ Apple وفقًا لسياسة خصوصية Apple. يعمل كود App Intents الخاص بـ Barakah محليًا داخل عملية التطبيق ويكتب مباشرة إلى مخزن البيانات المحلي. نحن لا نتلقى أو نعالج أي بيانات صوتية.</p>
+
+  <h2>9. بدون تتبع أو إعلانات من جهات خارجية</h2>
+  <p>لا يتضمن Barakah أي حزمة إعلانات، أو حزمة تحليلات، أو مكتبة تتبع من جهة خارجية. لا توجد أي إعلانات من أي نوع.</p>
+  <p>البيانات التشخيصية الوحيدة المتاحة لنا هي تقارير App Analytics الاختيارية وتقارير الأعطال من Apple. ولا تُزوّدنا Apple بها إلا إذا قمت بتفعيل خيار "المشاركة مع مطوري التطبيقات" ضمن إعدادات iOS &rarr; الخصوصية والأمان &rarr; التحليلات والتحسينات. تُجمَّع هذه المعلومات وتُخفى هويتها بواسطة Apple، ولا تحتوي على أي بيانات شخصية أو صحية أدخلتها، ولا يمكن استخدامها للتعرف عليك أو على أجهزتك أو عائلتك.</p>
+
+  <h2>10. المشتريات داخل التطبيق</h2>
+  <p>تتم معالجة اشتراكات Barakah Premium بالكامل عبر App Store التابع لـ Apple. لا تجمع Barakah Corp أو تخزّن أي معلومات دفع. وقد تعالج Apple البيانات المتعلقة بالشراء وفقًا لسياسة الخصوصية الخاصة بها.</p>
+
+  <h2>11. خصوصية الأطفال</h2>
+  <p>Barakah أداة مصممة للوالدين ومقدمي الرعاية. ولا يجمع أي بيانات من الأطفال مباشرة — إذ يُدخل جميع البيانات المستخدم البالغ. لا يربط التطبيق الأطفال بأي خدمة عبر الإنترنت، ولا يُرسل أي بيانات متعلقة بالأطفال إلى Barakah Corp أو أي جهة خارجية.</p>
+
+  <h2>12. حذف البيانات</h2>
+  <p>لحذف جميع بياناتك:</p>
+  <ul>
+    <li><strong>إذا كنت مالك العائلة:</strong> من إعدادات التطبيق، اختر <strong>إزالة من هذا الجهاز</strong> لمسح نسخة هذا الجهاز مع الإبقاء على بياناتك في iCloud، أو <strong>حذف بيانات العائلة وiCloud</strong> لحذف كل شيء نهائيًا لجميع أفراد العائلة.</li>
+    <li><strong>إذا كنت أحد أفراد العائلة:</strong> من إعدادات التطبيق، اختر <strong>مغادرة العائلة</strong> لإزالة وصول هذا الجهاز دون التأثير على بيانات المالك.</li>
+    <li><strong>من iCloud مباشرة:</strong> انتقل إلى إعدادات iPhone ← [اسمك] ← iCloud ← إدارة تخزين الحساب ← Barakah ← حذف البيانات، أو احذف بيانات حساب iCloud من موقع iCloud.com.</li>
+    <li>حذف التطبيق من iPhone/iPad يزيل أيضًا النسخة المحلية من البيانات.</li>
+  </ul>
+  <p>حذف التطبيق يزيل البيانات المحلية فورًا. وحذف بيانات iCloud يزيلها من جميع الأجهزة المتزامنة.</p>
+
+  <h2>13. الأمان</h2>
+  <p>يدعم Barakah المصادقة عبر Face ID وTouch ID ورمز مرور الجهاز لمنع الوصول غير المصرح به. يُفرَض قفل التطبيق في كل مرة يُفتح فيها من الخلفية. يُخزَّن معرّف الجهاز في Keychain بحماية <code>kSecAttrAccessibleAfterFirstUnlockThisDeviceOnly</code>، بحيث يبقى على هذا الجهاز فقط ولا يُدرَج أبدًا ضمن النسخ الاحتياطية المشفّرة أو يُنقل إلى جهاز آخر.</p>
+
+  <h2>14. التغييرات على هذه السياسة</h2>
+  <p>إذا أجرينا تغييرات جوهرية على هذه السياسة، سنقوم بتحديث التاريخ أعلى هذه الصفحة. تتوفر السياسة الحالية دائمًا على هذا الرابط. استمرار استخدام التطبيق بعد إجراء التغييرات يُعد قبولًا للسياسة المعدَّلة.</p>
+
+  <h2>15. التواصل</h2>
+  <p>لديك أسئلة أو استفسارات حول الخصوصية؟ راسلنا عبر <a href="mailto:barakah-app@proton.me">barakah-app@proton.me</a>.</p>
+</div>
+
+<footer>
+  <div>
+    <a href="privacy.html">سياسة الخصوصية</a>
+    <a href="support.html">الدعم</a>
+    <a href="mailto:barakah-app@proton.me">تواصل معنا</a>
+  </div>
+  <p class="copyright">© 2026 AbdurRahman Rozell / Barakah Corp. جميع الحقوق محفوظة.</p>
+</footer>
+
+</body>
+</html>
