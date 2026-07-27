@@ -23,25 +23,39 @@
       --muted: #6b7280;
       --card-bg: #ffffff;
       --border: #e5e7eb;
+      /* Added for the ported nav: these pages had no soft-teal or shadow token. */
+      --teal-soft: #e8f8f6;
+      --shadow: 0 18px 50px rgba(21, 32, 31, 0.12);
     }
     * { box-sizing: border-box; margin: 0; padding: 0; }
     body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; background: var(--cream); color: var(--text); }
 
-    nav { background: var(--teal); padding: 0 24px; display: flex; align-items: center; justify-content: space-between; height: 56px; }
-    nav .logo { color: #fff; font-weight: 700; font-size: 18px; text-decoration: none; display: flex; align-items: center; gap: 10px; }
-    nav .logo img { width: 28px; height: 28px; border-radius: 7px; }
-    nav a { color: rgba(255,255,255,0.85); text-decoration: none; font-size: 14px; margin-inline-start: 24px; }
-    nav a:hover { color: #fff; }
+    /* Site nav — matches index.html so every page shares one layout and one breakpoint. The nav
+       this replaced was a teal bar with a hard-coded height: 56px flex row and no media query
+       anywhere in the file, so on a phone the links and the language pill wrapped inside that fixed
+       height and collided. Below 640px .nav-inner stacks into a column, as the landing page does.
+       Colours use this page's own variable names (--text/--border), not index.html's
+       (--ink/--line); the two pages define different sets, per CLAUDE.md. */
+    .wrap { width: min(1120px, calc(100% - 40px)); margin: 0 auto; }
+    .nav { position: sticky; top: 0; z-index: 50; background: rgba(253, 248, 242, 0.88); backdrop-filter: blur(14px); border-bottom: 1px solid rgba(231, 236, 235, 0.8); }
+    .nav-inner { height: 68px; display: flex; align-items: center; justify-content: space-between; }
+    .brand { display: flex; align-items: center; gap: 12px; font-weight: 800; letter-spacing: -0.02em; color: var(--text); }
+    .brand-mark { width: 38px; height: 38px; border-radius: 11px; object-fit: cover; box-shadow: 0 8px 20px rgba(69, 184, 172, 0.3); }
+    .nav-links { display: flex; align-items: center; gap: 22px; font-size: 14px; font-weight: 650; color: var(--muted); }
+    /* Explicit colour + no-underline: these pages set a global `a { color: var(--teal) }` and
+       `a:hover { text-decoration: underline }`, which index.html does not. */
+    .nav-links a { color: var(--muted); }
+    .nav-links a:hover { color: var(--teal-dark); text-decoration: none; }
 
-    .lang-switch { position: relative; margin-inline-start: 18px; padding-inline-start: 18px; border-inline-start: 1px solid rgba(255,255,255,0.3); }
-    .lang-switch summary { display: inline-flex; align-items: center; gap: 6px; cursor: pointer; list-style: none; font-size: 14px; color: rgba(255,255,255,0.85); }
+    .lang-switch { position: relative; margin-inline-start: 4px; padding-inline-start: 16px; border-inline-start: 1px solid var(--border); }
+    .lang-switch summary { display: inline-flex; align-items: center; gap: 6px; cursor: pointer; list-style: none; padding: 6px 12px; border-radius: 999px; border: 1px solid var(--border); background: #fff; font-size: 13px; font-weight: 700; color: var(--muted); }
     .lang-switch summary::-webkit-details-marker { display: none; }
     .lang-switch summary::marker { content: ""; }
-    .lang-switch summary:hover, .lang-switch[open] summary { color: #fff; }
-    .lang-menu { position: absolute; inset-inline-end: 0; top: calc(100% + 12px); z-index: 60; display: flex; flex-direction: column; gap: 2px; min-width: 160px; background: #fff; border: 1px solid var(--border); border-radius: 14px; box-shadow: 0 14px 40px rgba(0,0,0,0.18); padding: 8px; }
-    .lang-menu a { margin-inline-start: 0; padding: 9px 12px; border-radius: 9px; font-size: 14px; font-weight: 600; color: var(--text); }
-    .lang-menu a:hover { background: #f0fdf4; }
-    .lang-menu a[aria-current="page"] { color: var(--teal); font-weight: 800; background: #f0fdf4; pointer-events: none; }
+    .lang-switch summary:hover, .lang-switch[open] summary { color: var(--teal-dark); border-color: var(--teal); }
+    .lang-menu { position: absolute; inset-inline-end: 0; top: calc(100% + 8px); z-index: 60; display: flex; flex-direction: column; gap: 2px; min-width: 160px; background: #fff; border: 1px solid var(--border); border-radius: 14px; box-shadow: var(--shadow); padding: 8px; }
+    .lang-menu a { padding: 9px 12px; border-radius: 9px; font-size: 14px; font-weight: 650; color: var(--text); }
+    .lang-menu a:hover { background: var(--teal-soft); text-decoration: none; }
+    .lang-menu a[aria-current="page"] { color: var(--teal-dark); font-weight: 800; background: var(--teal-soft); pointer-events: none; }
 
     .page-header { background: var(--teal); color: #fff; padding: 48px 24px 40px; text-align: center; }
     .page-header h1 { font-size: 32px; font-weight: 800; margin-bottom: 8px; }
@@ -83,27 +97,43 @@
     footer a { color: rgba(255,255,255,0.75); text-decoration: none; margin: 0 12px; }
     footer a:hover { color: var(--teal); }
     footer .copyright { margin-top: 12px; font-size: 13px; opacity: 0.5; }
+
+    /* The sub-pages previously had no @media rules at all — this breakpoint is what stops the nav
+       collapsing in on itself on a phone. flex-wrap on .nav-links additionally keeps the longer
+       translated labels (fr/es/tr) from overflowing horizontally. */
+    @media (max-width: 640px) {
+      .wrap { width: min(100% - 28px, 1120px); }
+      .nav-inner { height: auto; padding: 14px 0; align-items: flex-start; gap: 14px; flex-direction: column; }
+      .nav-links { gap: 16px; flex-wrap: wrap; }
+    }
   </style>
 </head>
 <body>
 
-<nav>
-  <a class="logo" href="index.tr.html"><img src="images/icon.png" alt="">Barakah</a>
-  <div>
-    <a href="support.tr.html">Destek</a>
-    <a href="privacy.tr.html">Gizlilik</a>
-    <details class="lang-switch">
-      <summary aria-label="Dili değiştir">🌐 Türkçe</summary>
-      <div class="lang-menu">
+<header class="nav">
+  <div class="wrap nav-inner">
+    <a class="brand" href="index.tr.html" aria-label="Barakah — ana sayfa">
+      <img class="brand-mark" src="images/icon.png" alt="Barakah uygulama simgesi" width="38" height="38">
+      <span>Barakah</span>
+    </a>
+    <nav class="nav-links" aria-label="Birincil gezinme">
+      <a href="index.tr.html#features">Özellikler</a>
+      <a href="index.tr.html#privacy">Gizlilik</a>
+      <a href="support.tr.html" aria-current="page">Destek</a>
+      <a href="privacy.tr.html">Politika</a>
+      <details class="lang-switch">
+        <summary aria-label="Dili değiştir">🌐 Türkçe</summary>
+        <div class="lang-menu">
         <a href="support.html" lang="en">English</a>
         <a href="support.ar.html" lang="ar">العربية</a>
         <a href="support.es.html" lang="es">Español</a>
         <a href="support.fr.html" lang="fr">Français</a>
         <a href="support.tr.html" lang="tr" aria-current="page">Türkçe</a>
-      </div>
-    </details>
+        </div>
+        </details>
+    </nav>
   </div>
-</nav>
+</header>
 
 <div class="page-header">
   <h1>Destek</h1>

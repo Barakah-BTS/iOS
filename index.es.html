@@ -600,6 +600,9 @@
 
       .nav-links {
         gap: 16px;
+        /* The translated labels (fr/es/tr especially) are long enough that four links plus the
+           language pill overflow a ~390px viewport on one line. */
+        flex-wrap: wrap;
       }
 
       .hero {
