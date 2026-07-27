@@ -60,11 +60,18 @@
     .faq-group { margin-bottom: 40px; }
     .faq-group h3 { font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--teal); margin-bottom: 12px; }
 
-    details { background: var(--card-bg); border: 1px solid var(--border); border-radius: 12px; margin-bottom: 8px; overflow: hidden; }
-    summary { padding: 16px 20px; font-size: 15px; font-weight: 600; cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center; }
-    summary::-webkit-details-marker { display: none; }
-    summary::after { content: '+'; font-size: 20px; font-weight: 400; color: var(--teal); flex-shrink: 0; margin-left: 12px; }
-    details[open] summary::after { content: '−'; }
+    /* FAQ accordion — scoped to .faq-group on purpose. The nav's language switcher is ALSO a
+       <details>/<summary>, so bare element selectors here were styling it as an FAQ card: it got
+       the white card background (which hid the white "English" label against it), the accordion's
+       "+" marker, and 16px of padding that inflated the pill over the nav links. Only these
+       support pages have a FAQ, which is why index/privacy render the switcher correctly. */
+    .faq-group details { background: var(--card-bg); border: 1px solid var(--border); border-radius: 12px; margin-bottom: 8px; overflow: hidden; }
+    .faq-group summary { padding: 16px 20px; font-size: 15px; font-weight: 600; cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center; }
+    .faq-group summary::-webkit-details-marker { display: none; }
+    /* margin-inline-start, not margin-left: this file uses logical properties throughout so the
+       Arabic RTL page mirrors correctly. */
+    .faq-group summary::after { content: '+'; font-size: 20px; font-weight: 400; color: var(--teal); flex-shrink: 0; margin-inline-start: 12px; }
+    .faq-group details[open] summary::after { content: '−'; }
     .faq-body { padding: 0 20px 16px; font-size: 14px; color: #374151; line-height: 1.7; }
     .faq-body p { margin-bottom: 8px; }
     .faq-body ul { padding-left: 20px; }
